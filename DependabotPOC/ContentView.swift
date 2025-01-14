@@ -5,7 +5,7 @@
 //  Created by Leonardo da Silva on 14/01/25.
 //
 
-import Algorithms
+import Collections
 import SwiftUI
 
 struct ContentView: View {
@@ -18,10 +18,10 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            let numbers = [10, 20, 30, 10, 40, 40, 10, 20]
-            let chunks = numbers.chunked(by: { $0 <= $1 })
-            // [[10, 20, 30], [10, 40, 40], [10, 20]]
-            print(chunks)
+            var deque: Deque<String> = ["Ted", "Rebecca"]
+            deque.prepend("Keeley")
+            deque.append("Nathan")
+            print(deque) // ["Keeley", "Ted", "Rebecca", "Nathan"]
         }
     }
 }
