@@ -1,0 +1,30 @@
+# We need to regenerate Package.lock after Dependabot updated one dependency
+name: Dependabot Post Action
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+
+jobs:
+  update_dependencies:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Resolve Swift Package Manager dependencies
+        run: |
+          echo "Resolving SPM dependencies"
+          xcodebuild -resolvePackageDependencies -project DependabotPOC.xcodeproj
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update SPM dependencies"
+          git push origin ${{ github.head_ref }}
