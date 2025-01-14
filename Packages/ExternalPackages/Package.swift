@@ -16,7 +16,7 @@ let package = Package(
             targets: ["ExternalPackages"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMinor(from: "1.0.0")),
+        .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMinor(from: "1.2.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
