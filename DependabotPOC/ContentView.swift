@@ -5,8 +5,8 @@
 //  Created by Leonardo da Silva on 14/01/25.
 //
 
-import Collections
 import SwiftUI
+import GoogleMobileAds
 
 struct ContentView: View {
     var body: some View {
@@ -17,12 +17,6 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-        .onAppear {
-            var deque: Deque<String> = ["Ted", "Rebecca"]
-            deque.prepend("Keeley")
-            deque.append("Nathan")
-            print(deque) // ["Keeley", "Ted", "Rebecca", "Nathan"]
-        }
     }
 }
 

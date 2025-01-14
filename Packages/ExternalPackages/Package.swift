@@ -16,7 +16,7 @@ let package = Package(
             targets: ["ExternalPackages"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-collections.git", .exact("1.0.0")),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: "11.9.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "ExternalPackages",
             dependencies: [
-                .product(name: "Collections", package: "swift-collections"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ]
         ),
     ]

@@ -1,13 +1,22 @@
 {
-  "originHash" : "f195f9e7ede71d3c6c4dbe4c6944de14f28161bf78403e6b5b555d8a18dcdaa7",
+  "originHash" : "763e1ceb3a3cb117e8c8b55ad9e574da3c59e3ffbf41d7b4904ad8171598bb65",
   "pins" : [
     {
-      "identity" : "swift-collections",
+      "identity" : "swift-package-manager-google-mobile-ads",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-collections.git",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       "state" : {
-        "revision" : "07e47b1e93e5a1e0ef0c50fcb2d6739fb6be4003",
-        "version" : "1.0.0"
+        "revision" : "ccc3c2b6307384283fc63e9fefe6fbe0af3da32f",
+        "version" : "11.9.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "708a282840c2171ee63bd93b87afa49fe507d70e",
+        "version" : "2.7.0"
       }
     }
   ],
