@@ -1,4 +1,4 @@
-# We need to regenerate Package.lock after Dependabot updated one dependency
+# We need to regenerate Package.resolved after Dependabot updated one dependency
 name: Dependabot Post Action
 
 on:
